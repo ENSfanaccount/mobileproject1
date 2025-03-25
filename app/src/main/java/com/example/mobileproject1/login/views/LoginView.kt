@@ -39,6 +39,7 @@ import androidx.lint.kotlin.metadata.Visibility
 import com.example.mobileproject1.R
 
 
+
 @Composable
 fun LoginView() {
     // Variables de estado
@@ -51,7 +52,7 @@ fun LoginView() {
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        horizontalAlignment =  Alignment.CenterHorizontally,
+        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
         // Imagen del logo
@@ -69,7 +70,7 @@ fun LoginView() {
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
-            label = { Text("email")},
+            label = { Text(stringResource(R.string.email_label)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Email
             ),
@@ -82,7 +83,7 @@ fun LoginView() {
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("password") },
+            label = { Text(stringResource(R.string.password_label)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Password
             ),
