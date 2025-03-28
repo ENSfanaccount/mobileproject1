@@ -4,4 +4,13 @@
     <string name="email_label">email</string>
     <string name="password_label">password</string>
     <string name="login_button">log in</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_m">Height (m)</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="bmi_result">BMI: %1$s</string>
+    <string name="good_weight">the patient has a good weight ✅</string>
+    <string name="bad_weight"> the patient doesnt have a good weight ❌</string>
+    <string name="invalid_input">Invalid input</string>
+
 </resources>

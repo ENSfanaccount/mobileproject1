@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.mobileproject1.IMC.views.BmiScreen
 import com.example.mobileproject1.login.views.LoginView
 import com.example.mobileproject1.sum.views.SumBox
 import com.example.mobileproject1.ui.theme.Mobileproject1Theme
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobileproject1Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SumBox()
+                    BmiScreen()
                 }
             }
         }
