@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_image_desc">Imagen de inicio de sesión</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="bmi_calculator">Calculadora de IMC</string>
+    <string name="weight_kg">Peso (kg)</string>
+    <string name="height_m">Altura (m)</string>
+    <string name="calculate_bmi">Calcular IMC</string>
+    <string name="bmi_result">IMC: %1$s</string>
+    <string name="good_weight">El paciente tiene un buen peso ✅</string>
+    <string name="bad_weight">El paciente no tiene un buen peso ❌</string>
+    <string name="app_name">Conversor de Temperatura</string>
+    <string name="enter_celsius">Ingrese Celsius</string>
+    <string name="convert">Convertir</string>
+    <string name="invalid_input">Entrada inválida</string>
+    <string name="toast_invalid_number">Por favor, ingrese un número válido</string>
+</resources>

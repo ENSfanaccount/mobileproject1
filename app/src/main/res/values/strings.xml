@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">mobileproject1</string>
     <string name="login_image_desc">Login Image</string>
     <string name="email_label">email</string>
     <string name="password_label">password</string>
     <string name="login_button">log in</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_m">Height (m)</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="bmi_result">BMI: %1$s</string>
+    <string name="good_weight">the patient has a good weight ✅</string>
+    <string name="bad_weight"> the patient doesnt have a good weight ❌</string>
+    <string name="app_name">Temperature Converter</string>
+    <string name="enter_celsius">Enter Celsius</string>
+    <string name="convert">Convert</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="toast_invalid_number">Please enter a valid number</string>
+    <string name="thermostat_description">Thermostat Image</string>
 </resources>
