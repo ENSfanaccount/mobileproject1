@@ -17,7 +17,7 @@ fun ThirdPartialView() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Primer Parcial",
+            text = "Tercer Parcial",
             fontSize = 24.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()

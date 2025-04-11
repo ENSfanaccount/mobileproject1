@@ -17,7 +17,7 @@ fun SecondPartialView() {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Primer Parcial",
+            text = "Segundo Parcial",
             fontSize = 24.sp,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
