@@ -9,12 +9,16 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import androidx.navigation.compose.rememberNavController
 import com.example.mobileproject1.IMC.views.BmiScreen
+import com.example.mobileproject1.Students.views.StudentListScreen
 import com.example.mobileproject1.ids.IdsView
 import com.example.mobileproject1.firstpartial.FirstPartialView
 import com.example.mobileproject1.secondpartial.SecondPartialView
 import com.example.mobileproject1.sum.views.SumBox
 import com.example.mobileproject1.temperatura.views.TemperatureScreen
-import com.example.mobileproject1.thirdpartial.ThirdPartialView
+import com.example.mobileproject1.thirdpartial.ThirdPartialScreen
+
+
+
 
 @Composable
 fun TabBarNavigationView(navController: NavHostController = rememberNavController()) {
@@ -53,7 +57,8 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.Ids.route) { IdsView(navController) }
             composable(ScreenNavigation.FirstPartial.route) { FirstPartialView() }
             composable(ScreenNavigation.SecondPartial.route) { SecondPartialView() }
-            composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView() }
+            composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialScreen(navController) }
+            composable(ScreenNavigation.Students.route) { StudentListScreen() }
             composable(ScreenNavigation.SUM.route) { SumBox() }
             composable(ScreenNavigation.IMC.route) { BmiScreen() }
             composable(ScreenNavigation.temperatura.route) { TemperatureScreen() }

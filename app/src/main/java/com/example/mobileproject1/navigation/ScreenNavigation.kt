@@ -12,5 +12,7 @@ sealed class ScreenNavigation(val route: String, val label: String, val icon: Im
     object SUM : ScreenNavigation("SUMRoute", "SUM", Icons.Default.Event)
     object IMC : ScreenNavigation("IMCRoute", "IMC", Icons.Default.Event)
     object temperatura : ScreenNavigation("temperaturaRoute", "temperatura", Icons.Default.Event)
+    object Students : ScreenNavigation("student_list", "students", Icons.Default.Event)
+
 }
 
