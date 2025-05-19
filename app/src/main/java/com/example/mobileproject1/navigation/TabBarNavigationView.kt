@@ -10,6 +10,7 @@ import androidx.navigation.compose.*
 import androidx.navigation.compose.rememberNavController
 import com.example.mobileproject1.IMC.views.BmiScreen
 import com.example.mobileproject1.Students.views.StudentListScreen
+import com.example.mobileproject1.examentercerparcial.view.MainScreen
 import com.example.mobileproject1.ids.IdsView
 import com.example.mobileproject1.firstpartial.FirstPartialView
 import com.example.mobileproject1.secondpartial.SecondPartialView
@@ -62,6 +63,9 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.SUM.route) { SumBox() }
             composable(ScreenNavigation.IMC.route) { BmiScreen() }
             composable(ScreenNavigation.temperatura.route) { TemperatureScreen() }
+            composable(ScreenNavigation.Students.route) { MainScreen() }
+
+
         }
     }
 }
