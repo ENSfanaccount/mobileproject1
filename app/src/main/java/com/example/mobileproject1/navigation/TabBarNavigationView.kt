@@ -9,9 +9,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
 import androidx.navigation.compose.rememberNavController
 import com.example.mobileproject1.IMC.views.BmiScreen
-import com.example.mobileproject1.Students.views.StudentListScreen
+
+import com.example.mobileproject1.Students.views.StudentListScreen2
 import com.example.mobileproject1.ids.IdsView
 import com.example.mobileproject1.firstpartial.FirstPartialView
+import com.example.mobileproject1.location.ui.LocationListScreen
 import com.example.mobileproject1.secondpartial.SecondPartialView
 import com.example.mobileproject1.sum.views.SumBox
 import com.example.mobileproject1.temperatura.views.TemperatureScreen
@@ -58,10 +60,12 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.FirstPartial.route) { FirstPartialView() }
             composable(ScreenNavigation.SecondPartial.route) { SecondPartialView() }
             composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialScreen(navController) }
-            composable(ScreenNavigation.Students.route) { StudentListScreen() }
+
             composable(ScreenNavigation.SUM.route) { SumBox() }
             composable(ScreenNavigation.IMC.route) { BmiScreen() }
             composable(ScreenNavigation.temperatura.route) { TemperatureScreen() }
+            composable(ScreenNavigation.Students2.route) { StudentListScreen2() }
+            composable(ScreenNavigation.raquet.route) { LocationListScreen() }
         }
     }
 }

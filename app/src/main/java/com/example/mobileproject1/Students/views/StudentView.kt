@@ -19,7 +19,7 @@ import androidx.compose.foundation.lazy.items
 
 
 @Composable
-fun StudentListScreen(viewModel: StudentViewModel = viewModel()) {
+fun StudentListScreen2(viewModel: StudentViewModel = viewModel()) {
     val students by viewModel.students.collectAsState()
 
     LazyColumn(modifier = Modifier.fillMaxSize().padding(16.dp)) {

@@ -23,5 +23,15 @@ fun ThirdPartialScreen(navController: NavController) {
         }) {
             Text("Lista De Estudiantes")
         }
+        Button(onClick = {
+            navController.navigate("student_list_2")
+        }) {
+            Text("Lista De Estudiantes chafa")
+        }
+        Button(onClick = {
+            navController.navigate("location_list")
+        }) {
+            Text("lista de racket en chihuahua")
+        }
     }
 }
