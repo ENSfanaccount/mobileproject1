@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.mobileproject1.location.ui.LocationListScreen
+import com.example.mobileproject1.navigation.ScreenNavigation
 import com.example.mobileproject1.navigation.TabBarNavigationView
 import com.example.mobileproject1.temperatura.views.TemperatureScreen
 import com.example.mobileproject1.ui.theme.Mobileproject1Theme

@@ -4,7 +4,7 @@ package com.example.mobileproject1.examentercerparcial.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mobileproject1.examentercerparcial.model.Student
-import com.example.mobileproject1.examentercerparcial.network.RetrofitInstance
+import com.example.mobileproject1.examentercerparcial.repository.RetrofitInstance
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

@@ -1,5 +1,6 @@
-package com.example.mobileproject1.examentercerparcial.network
+package com.example.mobileproject1.examentercerparcial.repository
 
+import com.example.mobileproject1.examentercerparcial.network.StudentApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
