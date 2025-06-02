@@ -6,6 +6,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Language
@@ -43,8 +45,10 @@ fun RestaurantDetailsView(restaurant: Restaurant) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState()) // ← Scroll añadido
                 .padding(padding)
         ) {
+            // Imagen del restaurante
             val imageResId = context.resources.getIdentifier(
                 restaurant.imgName.lowercase().replace(Regex("[^a-z0-9_]"), ""),
                 "drawable",
@@ -61,14 +65,16 @@ fun RestaurantDetailsView(restaurant: Restaurant) {
                             .height(280.dp),
                         contentScale = ContentScale.Crop
                     )
-                    // Overlay degradado
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(280.dp)
                             .background(
                                 Brush.verticalGradient(
-                                    colors = listOf(Color.Transparent, Color.Black.copy(alpha = 0.7f)),
+                                    colors = listOf(
+                                        Color.Transparent,
+                                        Color.Black.copy(alpha = 0.7f)
+                                    ),
                                     startY = 0f,
                                     endY = 280f
                                 )
@@ -98,6 +104,7 @@ fun RestaurantDetailsView(restaurant: Restaurant) {
 
             Spacer(modifier = Modifier.height(16.dp))
 
+
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -114,21 +121,33 @@ fun RestaurantDetailsView(restaurant: Restaurant) {
                     Spacer(modifier = Modifier.height(4.dp))
                     Text("Tiempo entrega: ${restaurant.delivery}", fontSize = 14.sp)
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text("Teléfono: ${restaurant.phone}", fontSize = 14.sp)
+                    Text(
+                        text = "Teléfono: ${restaurant.phone}",
+                        fontSize = 14.sp,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.clickable {
+                            val intent = Intent(Intent.ACTION_DIAL).apply {
+                                data = Uri.parse("tel:${restaurant.phone}")
+                            }
+                            context.startActivity(intent)
+                        }
+                    )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "Sitio web: ${restaurant.webSite}",
                         fontSize = 14.sp,
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.clickable {
+                            val intent = Intent(Intent.ACTION_VIEW).apply {
+                                data = Uri.parse(restaurant.webSite)
+                            }
+                            context.startActivity(intent)
+                        }
                     )
                 }
             }
-
-
-
-
-
             Spacer(modifier = Modifier.height(16.dp))
+
 
             val latitude = restaurant.latitude.toDoubleOrNull() ?: 0.0
             val longitude = restaurant.longitude.toDoubleOrNull() ?: 0.0
@@ -149,47 +168,6 @@ fun RestaurantDetailsView(restaurant: Restaurant) {
                 )
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 32.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly
-            ) {
-                Button(onClick = {
-                    val callIntent = Intent(Intent.ACTION_DIAL).apply {
-                        data = Uri.parse("tel:${restaurant.phone}")
-                    }
-                    context.startActivity(callIntent)
-                }) {
-                    Icon(Icons.Default.Phone, contentDescription = "Llamar")
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Llamar")
-                }
-
-                Button(onClick = {
-                    val siteIntent = Intent(Intent.ACTION_VIEW).apply {
-                        data = Uri.parse(restaurant.webSite)
-                    }
-                    context.startActivity(siteIntent)
-                }) {
-                    Icon(Icons.Default.Language, contentDescription = "Sitio Web")
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Sitio Web")
-                }
-
-                Button(onClick = {
-                    val gmmIntentUri = Uri.parse("geo:$latitude,$longitude?q=$latitude,$longitude(${Uri.encode(restaurant.name)})")
-                    val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-                    mapIntent.setPackage("com.google.android.apps.maps")
-                    context.startActivity(mapIntent)
-                }) {
-                    Icon(Icons.Default.Map, contentDescription = "Cómo llegar")
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Cómo llegar")
-                }
-            }
         }
     }
 }
