@@ -22,7 +22,7 @@ import com.example.mobileproject1.examentercerparcial.viewmodel.StudentViewModel
 import com.example.mobileproject1.examentercerparcial.viewmodel.UiState
 
 @Composable
-fun StudentListScreen(viewModel: StudentViewModel = viewModel()) {
+fun StudentsListScreen(viewModel: StudentViewModel = viewModel()) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
 

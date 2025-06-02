@@ -10,6 +10,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.mobileproject1.navigation.ScreenNavigation
 
 @Composable
 fun ThirdPartialScreen(navController: NavController) {
@@ -22,6 +23,15 @@ fun ThirdPartialScreen(navController: NavController) {
             navController.navigate("student_list")
         }) {
             Text("Lista De Estudiantes Examen")
+        }
+
+
+        Button(
+            onClick = {
+                navController.navigate(ScreenNavigation.RestaurantList.route)
+            }
+        ) {
+            Text(text = "Cargar Restaurantes")
         }
     }
 }

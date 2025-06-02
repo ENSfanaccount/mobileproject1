@@ -3,6 +3,8 @@ package com.example.mobileproject1.navigation
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.google.gson.Gson
+import java.net.URLEncoder
 
 sealed class ScreenNavigation(val route: String, val label: String, val icon: ImageVector) {
     object Ids : ScreenNavigation("IdsRoute", "Inicio", Icons.Default.Home)
@@ -13,6 +15,10 @@ sealed class ScreenNavigation(val route: String, val label: String, val icon: Im
     object IMC : ScreenNavigation("IMCRoute", "IMC", Icons.Default.Event)
     object temperatura : ScreenNavigation("temperaturaRoute", "temperatura", Icons.Default.Event)
     object Students : ScreenNavigation("student_list", "students", Icons.Default.Event)
+    object Restaurants : ScreenNavigation("Restaurants", "Restaurant", Icons.Default.People)
+    object RestaurantList : ScreenNavigation("restaurant_list", "Restaurantes", Icons.Default.Restaurant)
+
+
 
 }
 
